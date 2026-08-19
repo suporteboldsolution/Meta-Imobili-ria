@@ -19,14 +19,15 @@ export default function App() {
       'Olá, Meta Imobiliária (CRECI J - 3158)! Vim pelo site institucional e gostaria de atendimento sobre imóveis e consultoria em Feira de Santana/BA.';
     const encoded = encodeURIComponent(customText || defaultText);
     const url = `https://wa.me/${STORE_INFO.whatsappNumber}?text=${encoded}`;
-    try {
-      const openedWindow = window.open(url, '_blank', 'noopener,noreferrer');
-      if (!openedWindow || openedWindow.closed || typeof openedWindow.closed === 'undefined') {
-        window.location.href = url;
-      }
-    } catch {
-      window.location.href = url;
-    }
+    
+    // Always open WhatsApp in a new tab/window without navigating away from current page
+    const link = document.createElement('a');
+    link.href = url;
+    link.target = '_blank';
+    link.rel = 'noopener noreferrer';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
   };
 
   return (
