@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Instagram, MapPin, Menu, X, Sparkles, MessageCircle, Home, Award } from 'lucide-react';
 import { STORE_INFO } from '../data/metaData';
+import metaLogo from '../assets/images/logo_meta.png';
 
 interface HeaderProps {
   onOpenAiConsultant: () => void;
@@ -30,7 +31,7 @@ export const Header: React.FC<HeaderProps> = ({
           {/* Logo */}
           <a href="#hero" className="flex items-center group">
             <img 
-              src="/logo_meta.png" 
+              src={metaLogo} 
               alt="Meta Imobiliária" 
               className="h-14 sm:h-16 w-auto object-contain group-hover:scale-105 transition-transform" 
             />

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Instagram, Phone, MapPin, Home, Clock, ArrowUpRight } from 'lucide-react';
 import { STORE_INFO } from '../data/metaData';
+import metaLogo from '../assets/images/logo_meta.png';
 
 interface FooterProps {
   onOpenWhatsAppWithContext: (message: string) => void;
@@ -21,7 +22,7 @@ export const Footer: React.FC<FooterProps> = ({
           <div className="lg:col-span-5 space-y-4">
             <a href="#hero" className="inline-block">
               <img 
-                src="/logo_meta.png" 
+                src={metaLogo} 
                 alt="Meta Imobiliária" 
                 className="h-14 sm:h-16 w-auto object-contain" 
               />
