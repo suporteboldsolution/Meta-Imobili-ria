@@ -1,0 +1,8 @@
+{
+  "name": "Remix Remix Meta Imobiliária",
+  "description": "Site institucional e de consultoria da Meta Imobiliária em Feira de Santana - BA. Especialista em imóveis na planta, prontos para morar e corretores qualificados.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
