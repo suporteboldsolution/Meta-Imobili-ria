@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { MessageCircle, X, Sparkles, Send, PhoneCall } from 'lucide-react';
 import { STORE_INFO } from '../data/metaData';
-import metaLogo from '../assets/images/logo_meta.png';
+import { META_LOGO_BASE64 } from '../data/logo';
 
 interface WhatsAppFloatingButtonProps {
   onOpenWhatsAppWithContext: (message: string) => void;
@@ -31,7 +31,7 @@ export const WhatsAppFloatingButton: React.FC<WhatsAppFloatingButtonProps> = ({
           <div className="flex items-center justify-between pb-3 border-b border-slate-800">
             <div className="flex items-center gap-2.5">
               <img 
-                src={metaLogo} 
+                src={META_LOGO_BASE64} 
                 alt="Meta Imobiliária" 
                 className="w-9 h-9 object-contain rounded-full bg-white p-0.5" 
               />
